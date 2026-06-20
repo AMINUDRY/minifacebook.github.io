@@ -62,12 +62,12 @@ window.onload = function() {
     showApp();
   }
 }
-
 async function register() {
-  const phone = document.getElementById('phone').value.trim();
-  const name = document.getElementById('name').value.trim();
-  const pass = document.getElementById('pass').value.trim();
+   alert('Button ya yi aiki!');
   
+  const phone = document.getElementById('phone').value.trim();
+ const name = document.getElementById('name').value.trim();
+  const pass = document.getElementById('pass').value.trim()
   if(!phone || !name || !pass) { alert('Cika dukkan filaye'); return; }
   
   const { data, error } = await supabase.from('users').insert({phone, name, password:pass}).select().single();
